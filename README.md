@@ -12,9 +12,12 @@ $ vue --version
 ```
 
 ## start vue 2.0 (vue cli)
+
 ```
+vue create 01_hello-world-js
 01_hello-world-js
 ```
+vue 2.0 を選択して作成
 
 ## vue 2.0 + typescript
 https://jp.vuejs.org/v2/guide/typescript.html
@@ -24,3 +27,10 @@ https://jp.vuejs.org/v2/guide/typescript.html
 ```
 
 ## fabric.js
+HTML5 canvas library
+web上でお絵描きなどを行えるようにします。
+vue 2.0, typescript
+```
+npm install fabric
+npm install --save @types/fabric
+```
