@@ -15,22 +15,31 @@ export default {
   },
   mounted: function () {
     console.log("start mounted...");
-    var canvas = new fabric.Canvas("c");
-    
-    // create a rectangle object
-    var rect = new fabric.Rect({
-      left: 100,
-      top: 100,
-      fill: "red",
-      width: 20,
-      height: 20,
+    var canvas = new fabric.Canvas("c", { width: 500, height: 500, backgroundColor: 'white' }, );
+    canvas.isDrawingMode = true;
+
+    canvas.on('mouse:down', function(options) {
+      console.log(options.e.clientX, options.e.clientY);
     });
 
-    // "add" rectangle onto canvas
-    canvas.add(rect);
-  },
+    canvas.on('mouse:move', function(options) {
+      console.log(options.e.clientX, options.e.clientY);
+    });
+    
+    canvas.on('mouse:up', function(options) {
+      console.log(options.e.clientX, options.e.clientY);
+    });
+  }
 };
 </script>
 
 <style>
+#c{
+     border:1px solid;
+     position: absolute;
+     top:22px;
+     left:10px;
+     height: 100%;
+     width: 99%;
+ }
 </style>
