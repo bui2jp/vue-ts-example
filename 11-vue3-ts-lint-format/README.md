@@ -43,6 +43,20 @@ npx prettier --check .
 ```
 
 ## packege.json (config)
-```
+
+`npm run lint-fmt` を実行
 
 ```
+cat package.json
+{
+:
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "lint-fmt": "npx eslint src && npx prettier --write ."
+  },
+:  
+```
+
+
