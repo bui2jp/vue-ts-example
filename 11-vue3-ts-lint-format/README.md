@@ -59,4 +59,7 @@ cat package.json
 :  
 ```
 
-
+## git command 連携 (lint-staged)
+```
+npx mrm@2 lint-staged
+```
