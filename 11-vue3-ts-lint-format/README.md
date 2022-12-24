@@ -54,7 +54,7 @@ cat package.json
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "lint-fmt": "npx eslint src && npx prettier --write ."
+    "my-lint-fmt": "npx eslint src && npx prettier --write ."
   },
 :  
 ```

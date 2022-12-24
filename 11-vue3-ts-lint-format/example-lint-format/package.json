@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "lint-fmt": "npx eslint src && npx prettier --write ."
+    "my-lint-fmt": "npx eslint src && npx prettier --write .",
+    "prepare": "cd ../../ && husky install 11-vue3-ts-lint-format/example-lint-format/.husky"
   },
   "dependencies": {
     "vue": "^3.2.45"
@@ -18,9 +19,15 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "eslint": "^8.30.0",
     "eslint-plugin-vue": "^9.8.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
     "prettier": "2.8.1",
     "typescript": "^4.9.3",
     "vite": "^4.0.0",
     "vue-tsc": "^1.0.11"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix",
+    "*.{ts,md}": "prettier --write"
   }
 }
