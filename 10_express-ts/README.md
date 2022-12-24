@@ -44,6 +44,9 @@ APPSRV_NAME=appi-example
 az webapp up -n $APPSRV_NAME -l $LOCATOIN -g $RG_NAME --runtime "NODE:16-lts" --sku "P1V2"
 ```
 
+APPSRV_NAME_WIN=appi-example-win
+az webapp up -n $APPSRV_NAME_WIN -p asp-win
+
 (delete) rg
 ```
 az group delete -g $RG_NAME
