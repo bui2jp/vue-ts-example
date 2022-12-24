@@ -3,7 +3,8 @@
 
 echo "$(dirname -- "$0")/_/husky.sh"
 
-#cd $(dirname -- "$0")
+cd $(dirname -- "$0")
+cd ..
 echo "test start" $PWD
 
 npx lint-staged
