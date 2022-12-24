@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+echo "$(dirname -- "$0")/_/husky.sh"
+cd $(dirname -- "$0")
 echo "test start"
+
+
 npx lint-staged
