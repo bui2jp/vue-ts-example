@@ -15,7 +15,7 @@ export default {
   },
   mounted: function () {
     console.log("start mounted...");
-    var canvas = new fabric.Canvas("c", { width: 500, height: 500, backgroundColor: 'white' }, );
+    let canvas = new fabric.Canvas("c", { width: 500, height: 500, backgroundColor: 'white' }, );
     canvas.isDrawingMode = true;
 
     canvas.on('mouse:down', function(options) {
