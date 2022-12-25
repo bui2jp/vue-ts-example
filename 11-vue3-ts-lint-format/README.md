@@ -63,3 +63,11 @@ cat package.json
 ```
 npx mrm@2 lint-staged
 ```
+
+## Sonar Cloud 
+download sonar-scanner-cli-4.7.0.2747-macosx.zip from https://sonarcloud.io/
+
+```
+export SONAR_TOKEN=< SET TOKEN HERE from portal>
+sh run-sonar-scan.sh
+```
