@@ -12,7 +12,3 @@ export default class MyFabricView extends Vue {
     @Prop() private title!: string
 }
 </script>
-
-<style scoped>
-
-</style>
