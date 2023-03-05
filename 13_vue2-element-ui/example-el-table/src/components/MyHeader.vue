@@ -10,6 +10,10 @@ export default {
 
 <style scoped>
 .myheader{
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;    
     background-color:aqua
 }
 </style>

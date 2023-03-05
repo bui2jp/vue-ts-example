@@ -10,6 +10,10 @@ export default {
 
 <style scoped>
 .myfooter{
+    position: fixed;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
     background-color: bisque;
 }
 </style>
