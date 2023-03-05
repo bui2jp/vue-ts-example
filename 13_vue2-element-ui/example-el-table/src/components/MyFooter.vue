@@ -15,5 +15,6 @@ export default {
     height: 20px;
     width: 100%;
     background-color: bisque;
+    z-index: 10000;
 }
 </style>

@@ -23,7 +23,7 @@
           :data="tableDataList"
           border
           style="width: 100%"
-          height="500"
+          height="75vh"
         >
           <el-table-column prop="date" label="Date" width="180" fixed>
           </el-table-column>
@@ -62,17 +62,19 @@ type MyData = {
 })
 export default class HelloWorld extends Vue {
   @Prop() msg!: string;
-
+  tableHeight=300
   tableDataList: MyData[] = [];
   mounted() {
     console.log("start mounted()");
     //create test data
     this.tableDataList = [];
 
-    for (let i = 0; i < 20; i++) {
-      const nowString = new Date();
+    for (let i = 0; i < 400; i++) {
+      const now = new Date();
+      let nowString = i.toString() + ": ";
+      nowString += now.toDateString()
       const d1: MyData = {
-        date: nowString.toDateString(),
+        date: nowString,
         name: "bbb" + i,
         address: "address" + i,
         remark:
