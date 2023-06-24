@@ -36,7 +36,7 @@ function delay(ms: number): Promise<void> {
   });
 }
 
-await delay(10000); // 1000ミリ秒（1秒）待機
+await delay(3000); // 1000ミリ秒（1秒）待機
 
 app.$i18n.setLocaleMessage('ja', {
   message: {
