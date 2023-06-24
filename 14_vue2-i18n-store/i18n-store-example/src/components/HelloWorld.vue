@@ -1,7 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-
+    <p>{{ $t('message.hello', ['hello']) }}</p>
+    <p>{{ $t('message.mymsg1') }}</p>
+    <p>{{ $t('message.mymsg2') }}</p>
+    <p>{{ $t('message.mymsg3') }}</p>            
   </div>
 </template>
 
