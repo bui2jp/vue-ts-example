@@ -12,7 +12,8 @@
             "webRoot": "${workspaceFolder}/i18n-store-example/src",
             "sourceMapPathOverrides": {
               "webpack:///src/*": "${webRoot}/*"
-            }
+            },
+            "sourceMaps": true
           }        
     ]
 }
