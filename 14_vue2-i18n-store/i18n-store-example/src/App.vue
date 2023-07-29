@@ -47,11 +47,14 @@ export default class App extends Vue {
  * @return true if the given time is in summer time, false otherwise.
  */
 
-public isSummerTime(utcTime:any):boolean {
+public isSummerTime2(utcTime:any):boolean {
     console.log("utcTime=" + utcTime);
     let dt:Date = new Date(utcTime);
+    console.log("utcTime=" + utcTime);    
     let y:number = dt.getFullYear();
+    console.log("utcTime=" + utcTime);    
     let m:string = ("00" + (dt.getMonth()+1)).slice(-2);
+    console.log("utcTime=" + utcTime);    
     let d:string = ("00" + dt.getDate()).slice(-2);
     let hh:string = ("00" + dt.getHours()).slice(-2);
     let mm:string = ("00" + dt.getMinutes()).slice(-2);
@@ -62,7 +65,7 @@ public isSummerTime(utcTime:any):boolean {
     let dt3:Date = new Date(y + "-03-01 00:00:00");
     let dt4:Date = new Date(y + "-11-01 00:00:00");
     let isSummerTime:boolean = dt3 <= dt2 && dt2 < dt4;
-    console.log("utcTime=" + utcTime);    
+    console.log("utcTime=" + utcTime);
     return isSummerTime;
   }
 
