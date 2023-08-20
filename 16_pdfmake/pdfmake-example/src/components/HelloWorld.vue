@@ -7,6 +7,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import { MyPDFCreater } from "@/components/MyPDFCreater";
 
 @Component
 export default class HelloWorld extends Vue {
@@ -14,6 +15,8 @@ export default class HelloWorld extends Vue {
 
   onClick() {
     console.log("clicked!!!");
+    const pdf = new MyPDFCreater();
+    pdf.createPDF();
   }
 }
 </script>
