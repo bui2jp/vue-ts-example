@@ -42,6 +42,17 @@ total 50M
 -rw-r--r-- 1 user01 user01 5.5M Aug 20 08:53 NotoSansJP-SemiBold.ttf
 -rw-r--r-- 1 user01 user01 5.5M Aug 20 08:53 NotoSansJP-Thin.ttf
 ```
+pdfmake で利用するのは４種類
+```
+fonts = {
+  Roboto: {
+    normal: 'Roboto-Regular.ttf',
+    bold: 'Roboto-Medium.ttf',
+    italics: 'Roboto-Italic.ttf',
+    bolditalics: 'Roboto-MediumItalic.ttf'
+  }
+};
+```
 
 ## fontの指定方法 2種類
 詳しくは[こちら](https://pdfmake.github.io/docs/0.1/fonts/custom-fonts-client-side/)に書かれている内容。

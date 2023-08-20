@@ -17,12 +17,19 @@ export class MyPDFCreater {
     console.log("currentProtocol=" + currentProtocol);
     const currentPort = window.location.port;
     console.log("currentPort=" + currentPort);
+    const fontsPath = `${currentProtocol}//${currentHostname}:${currentPort}`;
     const fonts = {
       notoSansPJ: {
-        normal: `${currentProtocol}//${currentHostname}:${currentPort}/fonts/Noto_Sans_JP/static/NotoSansJP-Regular.ttf`,
-        bold: `${currentProtocol}//${currentHostname}:${currentPort}/fonts/Noto_Sans_JP/static/NotoSansJP-Regular.ttf`,
-        italics: `${currentProtocol}//${currentHostname}:${currentPort}/fonts/Noto_Sans_JP/static/NotoSansJP-Regular.ttf`,
-        bolditalics: `${currentProtocol}//${currentHostname}:${currentPort}/fonts/Noto_Sans_JP/static/NotoSansJP-Regular.ttf`,
+        normal: `${fontsPath}/fonts/Noto_Sans_JP/static/NotoSansJP-Regular.ttf`,
+        bold: `${fontsPath}/fonts/Noto_Sans_JP/static/NotoSansJP-Bold.ttf`,
+        italics: `${fontsPath}/fonts/Noto_Sans_JP/static/NotoSansJP-Thin.ttf`,
+        bolditalics: `${fontsPath}/fonts/Noto_Sans_JP/static/NotoSansJP-Bold.ttf`,
+      },
+      IPAexfont004: {
+        normal: `${fontsPath}/fonts/IPAexfont00401/ipaexg.ttf`,
+        bold: `${fontsPath}/fonts/IPAexfont00401/ipaexg.ttf`,
+        italics: `${fontsPath}/fonts/IPAexfont00401/ipaexg.ttf`,
+        bolditalics: `${fontsPath}/fonts/IPAexfont00401/ipaexg.ttf`,
       },
       //   notoSansPJ: {
       //     normal:
@@ -38,10 +45,31 @@ export class MyPDFCreater {
       content: [
         "First paragraph",
         "Another paragraph, this time a little bit longer to make sure, this line will be divided into at least two lines",
-        "ここに日本語を表示します(notoSansPJを利用しています)",
+        { text: "notoSansPJを利用して日本語を表示" },
+        {
+          text: "notoSansPJを利用して日本語を表示 (bold指定)",
+          style: { bold: true },
+        },
+        {
+          text: "notoSansPJを利用して日本語を表示 (NotoSansJP-Thin指定)",
+          style: { italics: true },
+        },
+        {
+          text: "IPAexfont004を利用して日本語を表示",
+          font: "IPAexfont004",
+        },
+        // {
+        //   text: "ここに日本語を表示します(notoSansPJを利用しています)bold",
+        //   style: "bold",
+        // },
       ],
       defaultStyle: {
         font: "notoSansPJ",
+      },
+      styles: {
+        bold: {
+          bold: true,
+        },
       },
     };
     pdfMake.createPdf(docDefinition, {}, fonts).open();
