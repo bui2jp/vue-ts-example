@@ -58,11 +58,24 @@ export class MyPDFCreater {
           text: "IPAexfont004を利用して日本語を表示",
           font: "IPAexfont004",
         },
-        // {
-        //   text: "ここに日本語を表示します(notoSansPJを利用しています)bold",
-        //   style: "bold",
-        // },
+        {
+          image: "myIcon1",
+          width: 200,
+        },
+        {
+          image: "myIcon2",
+          width: 200,
+        },
+        {
+          image: "myIcon3",
+          width: 200,
+        },
       ],
+      images: {
+        myIcon1: "http://localhost:8080/icons/free-delivery.png",
+        myIcon2: "http://localhost:8080/icons/free-delivery.png",
+        myIcon3: "http://localhost:8080/icons/free-delivery.png",
+      },
       defaultStyle: {
         font: "notoSansPJ",
       },
