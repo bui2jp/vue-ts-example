@@ -51,6 +51,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
+//これはclass style コンポーネントと呼ばれる形式
 @Component
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
