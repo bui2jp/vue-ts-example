@@ -10,6 +10,7 @@
 
 <script lang="ts">
 import { Options as Component, Prop, Vue } from 'vue-property-decorator';
+import i18n from '../i18n'
 
 @Component({})
 export default class HelloWorld extends Vue {
@@ -20,20 +21,14 @@ export default class HelloWorld extends Vue {
     console.log("this.$t: ", this.$t("message.hello"));
 
     //ここでi18nを更新してみる
-    const messages = {
-      en: {
+    const messages3 = {
         message: {
-          hello: 'hello world'
-        }
-      },
-      ja: {
-        message: {
-          hello: 'こんにちは、世界 (これはi18nのリソースですよ)[!更新!]'
-        }
-      }
+          hello: 'messages3で更新してみました。'
+        }      
     }
     //
-    
+    console.log("hellow world mounted()で更新")
+    i18n.global.setLocaleMessage('ja',messages3);
   }
 }
 </script>
