@@ -2,6 +2,9 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>{{ $t("message.hello") }}</p>
+    <p>vue3 + class style(vue-property-decorator) でも vue-i18n は動く</p>
+    <p>viteでも動くことを確認。</p>    
+    <p>各ライブラリのバージョンにご注意。</p>
   </div>
 </template>
 
