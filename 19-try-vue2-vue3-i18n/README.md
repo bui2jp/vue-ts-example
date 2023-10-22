@@ -11,8 +11,9 @@ npm run lint
 ## i18nをvue3のclass styleで利用できるかな
 
 - vue2のプロジェクトにi18nを入れる
+※v8を利用 v9はvue3用です
 
-```
-npm install vue-i18n@8
-```
-※v9はvue3用です
+- vue3に変更する
+※v9を利用する。普通に利用できそう。
+
+- viteに変更してみる

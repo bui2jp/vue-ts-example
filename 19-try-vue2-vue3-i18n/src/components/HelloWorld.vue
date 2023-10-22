@@ -6,11 +6,16 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Options as Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({})
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
+
+  mounted(){
+    console.log("hellow world mounted()")
+    console.log("this.$t: ", this.$t("message.hello"));
+  }
 }
 </script>
 
