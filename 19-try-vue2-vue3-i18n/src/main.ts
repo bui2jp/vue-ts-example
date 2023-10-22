@@ -39,3 +39,10 @@ const i18n = createI18n({
 const app = createApp(App)
 app.use(i18n);
 app.mount('#app');
+
+const messages2 = {
+    message: {
+      hello: 'こんにちは、setLocaleMessage で変更しましたよ'
+    }
+}
+i18n.global.setLocaleMessage('ja',messages2)

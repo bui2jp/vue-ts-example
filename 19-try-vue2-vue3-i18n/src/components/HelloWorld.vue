@@ -18,6 +18,22 @@ export default class HelloWorld extends Vue {
   mounted(){
     console.log("hellow world mounted()")
     console.log("this.$t: ", this.$t("message.hello"));
+
+    //ここでi18nを更新してみる
+    const messages = {
+      en: {
+        message: {
+          hello: 'hello world'
+        }
+      },
+      ja: {
+        message: {
+          hello: 'こんにちは、世界 (これはi18nのリソースですよ)[!更新!]'
+        }
+      }
+    }
+    //
+    
   }
 }
 </script>
