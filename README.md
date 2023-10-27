@@ -34,3 +34,11 @@ vue 2.0, typescript
 npm install fabric
 npm install --save @types/fabric
 ```
+
+
+
+# vite
+プロジェクトの作成
+```
+npm create vite@latest NN-xxxxxxx --template vue
+```
