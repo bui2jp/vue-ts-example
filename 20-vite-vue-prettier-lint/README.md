@@ -40,3 +40,9 @@ $ npm install prettier -D --save-exact
 $ cat package.json  | grep pretti
     "prettier": "3.0.3"
 ```
+
+run (local)
+
+```
+
+```
