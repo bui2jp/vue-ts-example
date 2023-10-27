@@ -29,6 +29,9 @@ settings.json
 }
 ```
 
+※保存時に動くはず。動かない場合は設定から変更してみる
+※vscodeの右下のPrettierでPrettier実行時のログが確認できる
+
 ```
 eslint   (linter)   : v2.4.2
 ```
@@ -44,5 +47,13 @@ $ cat package.json  | grep pretti
 run (local)
 
 ```
+$ npx prettier src --write
+src/App.vue 163ms
+src/components/HelloWorld.vue 39ms
+src/main.ts 3ms
+src/style.css 9ms
+src/vite-env.d.ts 3m
 
+$ echo $?
+0 //正常
 ```
