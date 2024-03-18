@@ -33,44 +33,45 @@
     <el-col :span="6"><div class="grid-content bg-gray3" /></el-col>
   </el-row> -->
 
-  <div style="background-color: antiquewhite">
-    <el-row class="row-bg" justify="space-around">
-      <el-col :offset="1" :span="8"
-        ><div class="grid-content">
-          <el-text class="w-150px mx-1" truncated
-            >document name 1 document name 1 document name 1</el-text
-          >
-        </div></el-col
-      >
-      <el-col :offset="1" :span="3"
-        ><div class="grid-content"><el-checkbox></el-checkbox></div
-      ></el-col>
-    </el-row>
+  <div
+    style="
+      width: 400px;
 
-    <el-row class="w-150px row-bg">
-      <el-col :offset="1" :span="8"
+      padding: 10px;
+      border-radius: 5px;
+    "
+  >
+    <el-row class="row-bg">
+      <el-col :offset="1" :span="10"
         ><div class="grid-content">
-          <el-text class="mx-1" truncated
-            >truncatedのサンプル document name 2 document name 2 document name
-            2</el-text
-          >
+          <el-text class="mx-1" truncated>document name 1</el-text>
         </div></el-col
       >
-      <el-col :offset="1" :span="3"
+      <el-col :offset="1" :span="1"
         ><div class="grid-content"><el-checkbox></el-checkbox></div
       ></el-col>
     </el-row>
 
     <el-row class="row-bg">
-      <el-col :offset="1" :span="8"
+      <el-col :offset="1" :span="1"
+        ><div class="grid-content"><el-checkbox></el-checkbox></div
+      ></el-col>
+      <el-col :offset="1" :span="10"
         ><div class="grid-content">
-          <el-text class="mx-1" line-clamp="1"
-            >[sample]line-clamp="1" document name 3 document name 3 document
-            name 3 document name 3 document name 3</el-text
+          <el-text class="mx-1" truncated>document name 1</el-text>
+        </div></el-col
+      >
+    </el-row>
+
+    <el-row class="row-bg">
+      <el-col :offset="1" :span="10"
+        ><div class="grid-content">
+          <el-text class="mx-1" truncated
+            >document name 1 document document document</el-text
           >
         </div></el-col
       >
-      <el-col :offset="1" :span="3"
+      <el-col :offset="1" :span="1"
         ><div class="grid-content"><el-checkbox></el-checkbox></div
       ></el-col>
     </el-row>
