@@ -3,7 +3,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <HelloWorld msg="checkbox のカスタマイズ" />
+  <HelloWorld msg="checkbox のカスタマイズするz" />
 </template>
 
 <style scoped>
