@@ -1,0 +1,12 @@
+
+> 16-vue3-app-insights@0.0.0 dev
+> vite
+
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+
+  VITE v5.0.10  ready in 364 ms
+
+  ➜  Local:   http://localhost:5175/
+  ➜  Network: use --host to expose
+12:15:32 PM [vite] hmr update /src/components/HelloWorld.vue

@@ -41,8 +41,8 @@ npm install fabric
 npm install --save @types/fabric
 ```
 
-# vue3 & vite
+# vite & vue3 & typescript
 
 ```
-npm create vite@latest my-vue-app -- --template vue
+npm create vite@latest my-vue-app -- --template vue-ts
 ```

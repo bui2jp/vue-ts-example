@@ -18,7 +18,8 @@ const tryPdfOut = () => {
     pageMargins: [60, 150, 60, 150],
     pageSize: "A4",
     pageOrientation: "landscape",
-    content: [getBodyContent()],
+    //content: [getBodyContent3(), getBodyContent2(), getBodyContent()],
+    content: [getBodyContent3()],
   };
   pdfMake.createPdf(docDefinition).open();
 };
@@ -29,6 +30,29 @@ const getBodyContent = () => {
     fit: [800, 300], // [横幅、高さ]
     //A4 595 x 841 およそ
     alignment: "center",
+  };
+};
+const getBodyContent2 = () => {
+  return {
+    text: "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+    style: { alignment: "left" },
+  };
+};
+const getBodyContent3 = () => {
+  const content2 = getBodyContent2();
+  return {
+    columns: [
+      {
+        text: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        width: "90%",
+      },
+      {
+        text: "bbb222222222222222222222222222222222222222222222222222222222",
+        width: "10%",
+      },
+    ],
+    columnGap: 10,
+    background: "#ff5500",
   };
 };
 const getFooterContent = (currentPage, pageCount, pageSize) => {

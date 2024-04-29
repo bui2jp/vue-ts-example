@@ -10,7 +10,22 @@ const mychecked03 = ref(false);
 
 <template>
   <h1>{{ msg }}</h1>
+  <h2>css + image</h2>  
+  <div id="my-img-checkbox-area1">
+    <input type="checkbox" name="mychecked01" v-model="mychecked01" />
+    <label for="mychecked01">mychecked01</label>
+  </div>
+  <div id="my-img-checkbox-area2">
+    <input type="checkbox" name="mychecked02" v-model="mychecked02" />
+    <label for="mychecked02">mychecked026</label>
+  </div>
+  <div id="my-img-checkbox-area3">
+    <input type="checkbox" name="mychecked03" v-model="mychecked03" />
+    <label for="mychecked03">mychecked03</label>
+  </div>
 
+
+  <h2>css only</h2>
   <div id="my-check-box-area1">
     <input type="checkbox" name="mychecked01" v-model="mychecked01" />
     <label for="mychecked01">mychecked01</label>
