@@ -11,10 +11,25 @@ const mychecked03 = ref(false);
 <template>
   <h1>{{ msg }}</h1>
   <h2>css + image</h2>  
-  <div id="my-img-checkbox-area1">
-    <input type="checkbox" name="mychecked01" v-model="mychecked01" />
-    <label for="mychecked01">mychecked01</label>
+  
+  <div>
+    pngイメージ
+    <img src="/checkbox_black.png" alt="" title="" width="48px">
+    <img src="/checkbox_blue.png" alt="" title=""  width="48px">
   </div>
+
+  <div>  
+    svgイメージ
+    <img src="/checkbox_black.svg" alt="" title="" width="48px">
+    <img src="/checkbox_blue.svg" alt="" title=""  width="48px">
+  </div>
+
+  <div>image を利用した checkbox</div>
+  <label class="my-img-checkbox" for="img-checkbox01">
+    <input id="img-checkbox01" type="checkbox" v-model="mychecked01" />
+    <span class="my-img-check-text"> my img check box</span>
+  </label>
+
   <div id="my-img-checkbox-area2">
     <input type="checkbox" name="mychecked02" v-model="mychecked02" />
     <label for="mychecked02">mychecked026</label>
@@ -42,6 +57,35 @@ const mychecked03 = ref(false);
 </template>
 
 <style scoped>
+
+
+.my-img-checkbox {
+  cursor: pointer;
+}
+
+/* チェックボックスとテキストの上下を中央に */
+.my-img-check-text {
+  align-items: center;
+  display: flex;
+}
+.my-img-checkbox input {
+  display: none; /* デフォルトのチェックボックスを非表示 */
+}
+.my-img-checkbox input + .my-img-check-text::before {
+  background-image: url("/checkbox_black.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 30px;
+  position: relative;
+  width: 30px;
+}
+.my-img-checkbox input:checked + .my-img-check-text::before {
+  background-image: url("/checkbox_blue.png");
+}
+
+
 #my-check-box-area1 {
   /* リセット */
   input[type="checkbox"] {
