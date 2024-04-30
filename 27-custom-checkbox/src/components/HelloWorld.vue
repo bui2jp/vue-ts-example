@@ -27,7 +27,7 @@ const mychecked03 = ref(false);
   <div>image を利用した checkbox</div>
   <label class="my-img-checkbox" for="img-checkbox01">
     <input id="img-checkbox01" type="checkbox" v-model="mychecked01" />
-    <span class="my-img-check-text"> my img check box</span>
+    <span class="my-img-check-text"> my img check box これです</span>
   </label>
 
   <div id="my-img-checkbox-area2">
@@ -72,7 +72,7 @@ const mychecked03 = ref(false);
   display: none; /* デフォルトのチェックボックスを非表示 */
 }
 .my-img-checkbox input + .my-img-check-text::before {
-  background-image: url("/checkbox_black.png");
+  background-image: url("/checkbox_light_gray.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
