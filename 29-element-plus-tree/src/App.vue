@@ -12,8 +12,8 @@ import MyTree from "./components/SampleTree.vue";
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue(これは App.vueから propsで渡されています)" />
-  <MyTree />
+  <!-- <HelloWorld msg="Element-Plus Tree" /> -->
+  <MyTree msg="Element-Plus Tree (sample)" />
 </template>
 
 <style scoped>
