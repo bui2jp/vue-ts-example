@@ -3,8 +3,9 @@
 import { defineComponent } from "vue";
 
 interface Tree {
-  label: string;
-  children?: Tree[];
+  [key: string]: any;
+  // label: string;
+  // children?: Tree[];
 }
 
 // Option API
@@ -26,9 +27,11 @@ export default defineComponent({
     //dataを初期化
     this.data = [
       {
+        id: 1,
         label: "Level one 1",
         children: [
           {
+            id: "自由に設定可能文字列も可能",
             label: "Level two 1-1",
             children: [
               {
@@ -106,6 +109,21 @@ export default defineComponent({
     clickme3() {
       console.log("click me3!");
     },
+    showCheckedTreeNode() {
+      console.log("click showCheckedTreeNode!");
+
+      //getCheckedNodesを使って現在のcheckの状態を取得する
+      const checkedNode = this.$refs.treeRef.getCheckedNodes();
+      console.log({ checkedNode });
+
+      //getCheckedKeys
+      const checkedKeys = this.$refs.treeRef.getCheckedKeys();
+      console.log({ checkedKeys });
+
+      //getHalfCheckedNod
+      const halfCheckedNodes = this.$refs.treeRef.getHalfCheckedNodes();
+      console.log({ halfCheckedNodes });
+    },
   },
 });
 </script>
@@ -117,8 +135,11 @@ export default defineComponent({
       >(これはel-button) count is {{ count }}</el-button
     >
   </div>
-
+  <el-button type="primary" @click="showCheckedTreeNode()"
+    >checkされているnodeを取得して表示</el-button
+  >
   <el-tree
+    ref="treeRef"
     style="max-width: 600px"
     :data="data"
     :props="defaultProps"
@@ -126,6 +147,7 @@ export default defineComponent({
     show-checkbox
     :default-checked-keys="[0]"
     :default-expand-all="true"
+    node-key="id"
   />
 
   <el-button ref="clickme1" @click="clickme()">click me!1</el-button>
