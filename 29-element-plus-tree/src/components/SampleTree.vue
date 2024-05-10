@@ -19,6 +19,7 @@ export default defineComponent({
       count: 0,
       data,
       defaultProps,
+      open: false,
     };
   },
   mounted() {
@@ -97,6 +98,13 @@ export default defineComponent({
     },
     clickme() {
       console.log("click me!");
+      console.log(this.$refs.clickme2);
+    },
+    clickme2() {
+      console.log("click me2!");
+    },
+    clickme3() {
+      console.log("click me3!");
     },
   },
 });
@@ -120,7 +128,30 @@ export default defineComponent({
     :default-expand-all="true"
   />
 
-  <el-button @click="clickme()">click me!</el-button>
+  <el-button ref="clickme1" @click="clickme()">click me!1</el-button>
+  <el-button ref="clickme2" @click="clickme2()">click me!2</el-button>
+  <el-button ref="clickme3" @click="clickme3()">click me!3</el-button>
+  <el-button type="primary" @click="open = true">Begin Tour</el-button>
+
+  <el-tour v-model="open">
+    <el-tour-step
+      :target="$refs.clickme1?.$el"
+      title="これは１つ目のボタン"
+      description="Save your changes"
+    >
+      <div>Put you files here.</div>
+    </el-tour-step>
+    <el-tour-step
+      :target="$refs.clickme2?.$el"
+      title="これは２つ目のボタン"
+      description="Save your changes"
+    />
+    <el-tour-step
+      :target="$refs.clickme3?.$el"
+      title="これは３つ目のボタン"
+      description="Click to see other"
+    />
+  </el-tour>
 </template>
 
 <style scoped>
